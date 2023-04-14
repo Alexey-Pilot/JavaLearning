@@ -1,5 +1,7 @@
 package HW_1;
+
 import java.util.Scanner;
+
 // Вычислить n-ое треугольного число (сумма чисел от 1 до n), n! (произведение чисел от 1 до n)
 public class task_1 {
     public static void main(String[] args) {
@@ -10,16 +12,18 @@ public class task_1 {
         System.out.println();
         factorial(num);
     }
-    static void triangle_num(int n){
+
+    static void triangle_num(int n) {
         int tr_num = 0;
-        for(int i = 0; i <= n; i++){
+        for (int i = 0; i <= n; i++) {
             tr_num += i;
         }
         System.out.printf("%d теугольное число: %d", n, tr_num);
     }
-    static void factorial(int n){
+
+    static void factorial(int n) {
         int f = 1;
-        for(int i = 2; i <= n; i++){
+        for (int i = 2; i <= n; i++) {
             f *= i;
         }
         System.out.printf("Факториал числа %d: %d", n, f);
