@@ -1,10 +1,8 @@
 package HW_3;
 
 import org.jetbrains.annotations.NotNull;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
-import java.util.Map;
+
+import java.util.*;
 
 //Заполнить список названиями планет Солнечной системы в произвольном порядке с повторениями.
 // Вывести название каждой планеты и количество его повторений в списке.
@@ -15,7 +13,7 @@ public class Task3 {
         System.out.println(planetArr);
         Map<String,Integer> countPlanet = new HashMap<String, Integer>();
         for (String i : planets){
-            countPlanet.put(i, countElem(planetArr, i));
+            countPlanet.put(i, Collections.frequency(planetArr, i));
         }
         for (String key : planets){
             System.out.printf("%s: %d", key, countPlanet.get(key));
@@ -33,11 +31,5 @@ public class Task3 {
         }
         return res;
     }
-    public static int countElem(ArrayList<String> arr, String elem){
-        int counter =0;
-        for (String s : arr){
-            if(s.equals(elem)) counter ++;
-        }
-        return counter;
-    }
+
 }
