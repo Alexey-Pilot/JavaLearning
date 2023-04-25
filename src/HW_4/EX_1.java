@@ -15,7 +15,7 @@ public class EX_1 {
 
     public static LinkedList<Integer> CreateLL() {
         LinkedList<Integer> ll = new LinkedList<>();
-        int size = new Random().nextInt((20) + 10);
+        int size = new Random().nextInt(20) + 10;
         for (int i = 0; i < size; i++) {
             int el = new Random().nextInt((100) + 1);
             ll.add(el);
