@@ -2,8 +2,15 @@ package HW_4;
 
 import java.util.Random;
 
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
+final class Dequeue {
+    public int firstElem;
+    public int[] array;
+
+    public Dequeue(int firstElem, int[] array) {
+        this.firstElem = firstElem;
+        this.array = array;
+    }
+}
 
 public class EX_4 {
     public static void main(String[] args) {
@@ -60,12 +67,4 @@ public class EX_4 {
     }
 }
 
-final class Dequeue {
-    public int firstElem;
-    public int[] array;
 
-    public Dequeue(int firstElem, int[] array) {
-        this.firstElem = firstElem;
-        this.array = array;
-    }
-}

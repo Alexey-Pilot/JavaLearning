@@ -1,6 +1,14 @@
 package HW_4;
 import java.util.LinkedList;
+final class DequeueL{
+    public int firstElem;
+    public LinkedList<Integer> lList;
+    public DequeueL(int firstElem, LinkedList<Integer> lList){
+        this.firstElem = firstElem;
+        this.lList = lList;
+    }
 
+}
 //Реализуйте очередь с помощью LinkedList со следующими методами:
 // enqueue() - помещает элемент в конец очереди,
 // dequeue() - возвращает первый элемент из очереди и удаляет его,
@@ -11,8 +19,9 @@ public class EX_2 {
         System.out.println(ll);
         LinkedList<Integer> eq = enqueue(ll);
         System.out.println(eq);
-        int dq = dequeue(ll);
-        System.out.println(dq);
+        DequeueL dq = dequeue(ll);
+        System.out.println(dq.firstElem);
+        System.out.println(dq.lList);
         int fst = first(ll);
         System.out.println(fst);
     }
@@ -21,9 +30,9 @@ public class EX_2 {
         lst.add(el);
         return lst;
     }
-    public static int dequeue(LinkedList<Integer> lst){
+    public static DequeueL dequeue(LinkedList<Integer> lst){
         int el = lst.pollFirst();
-        return el;
+        return new DequeueL(el, lst);
     }
     public static int first (LinkedList<Integer> lst){
         int el = lst.peekFirst();
