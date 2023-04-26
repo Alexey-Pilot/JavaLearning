@@ -15,7 +15,7 @@ final class DequeueL{
 // first() - возвращает первый элемент из очереди, не удаляя.
 public class EX_2 {
     public static void main(String[] args) {
-        LinkedList<Integer> ll = EX_1.CreateLL();
+        LinkedList<Integer> ll = EX_1.createLL();
         System.out.println(ll);
         LinkedList<Integer> eq = enqueue(ll);
         System.out.println(eq);
@@ -26,12 +26,11 @@ public class EX_2 {
         System.out.println(fst);
     }
     public static LinkedList<Integer> enqueue(LinkedList<Integer> lst){
-        int el = lst.pollFirst();
-        lst.add(el);
+        lst.add(lst.pollFirst());
         return lst;
     }
     public static DequeueL dequeue(LinkedList<Integer> lst){
-        int el = lst.pollFirst();
+        int el = lst.pop();
         return new DequeueL(el, lst);
     }
     public static int first (LinkedList<Integer> lst){

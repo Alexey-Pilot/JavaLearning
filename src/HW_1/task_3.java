@@ -15,16 +15,12 @@ public class task_3 {
         switch (o) {
             case "+":
                 System.out.println(sum_nums(a, b));
-                break;
             case "-":
                 System.out.println(diff_nums(a, b));
-                break;
             case "*":
                 System.out.println(mult_nums(a, b));
-                break;
             case "/":
-                System.out.println(div_nums(a, b));
-                break;
+                div_nums(a, b);
         }
 
     }
@@ -41,7 +37,17 @@ public class task_3 {
         return a * b;
     }
 
-    static Double div_nums(double a, double b) {
-        return a / b;
+    static void div_nums(int a, int b) {
+        try {
+            if (a % b == 0) System.out.println(a / b);
+            double x  = a;
+            double y = b;
+            System.out.println(x / y);
+        } catch (Exception exception) {
+            String s = "b can't be equals to 0";
+            System.out.println(s);
+            System.out.println(exception);
+        }
+
     }
 }

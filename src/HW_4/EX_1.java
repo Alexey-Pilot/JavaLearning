@@ -1,5 +1,6 @@
 package HW_4;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -7,13 +8,13 @@ import java.util.Random;
 // Постараться не обращаться к листу по индексам.
 public class EX_1 {
     public static void main(String[] args) {
-        LinkedList<Integer> ll = CreateLL();
+        LinkedList<Integer> ll = createLL();
         System.out.println(ll);
-        LinkedList<Integer> ll_rev = RevertLL(ll);
+        LinkedList<Integer> ll_rev = revertLL(ll);
         System.out.println(ll_rev);
     }
 
-    public static LinkedList<Integer> CreateLL() {
+    public static LinkedList<Integer> createLL() {
         LinkedList<Integer> ll = new LinkedList<>();
         int size = new Random().nextInt(20) + 10;
         for (int i = 0; i < size; i++) {
@@ -23,11 +24,8 @@ public class EX_1 {
         return ll;
     }
 
-    public static LinkedList<Integer> RevertLL(LinkedList<Integer> list) {
-        LinkedList<Integer> res = new LinkedList<>();
-        while (list.size() > 0) {
-            res.add(list.pollLast());
-        }
-        return res;
+    public static LinkedList<Integer> revertLL(LinkedList<Integer> lst) {
+        Collections.reverse(lst);
+        return lst;
     }
 }
