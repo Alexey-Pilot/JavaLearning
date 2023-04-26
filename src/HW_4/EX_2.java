@@ -1,4 +1,6 @@
 package HW_4;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.LinkedList;
 final class DequeueL{
     public int firstElem;
@@ -33,9 +35,8 @@ public class EX_2 {
         int el = lst.pop();
         return new DequeueL(el, lst);
     }
-    public static int first (LinkedList<Integer> lst){
-        int el = lst.peekFirst();
-        return el;
+    public static int first (@NotNull LinkedList<Integer> lst){
+        return lst.pollFirst();
     }
 
 }

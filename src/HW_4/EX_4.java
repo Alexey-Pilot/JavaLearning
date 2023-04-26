@@ -66,5 +66,3 @@ public class EX_4 {
         return arr[0];
     }
 }
-
-
